@@ -1,0 +1,33 @@
+/* Đảm bảo menu xổ xuống hiển thị đúng */
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    min-width: 160px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Đảm bảo từng dòng là 1 hàng */
+.dropdown-menu li {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+/* Các link hiển thị đầy đủ chiều ngang */
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: black;
+    white-space: nowrap; /* Ngăn chữ xuống hàng */
+}
+
+/* Hover đổi màu */
+.dropdown-menu li a:hover {
+    background-color: #007bff;
+    color: white;
+}

@@ -1,0 +1,76 @@
+    #messenger-icon {
+        position: fixed;
+        bottom: 20px; /* Cách mép dưới 20px */
+        right: 20px; /* Cách mép phải 20px */
+        z-index: 1000; /* Đảm bảo biểu tượng nằm trên các thành phần khác */
+    }
+
+    #messenger-icon img {
+        border-radius: 50%; /* Làm tròn biểu tượng */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng */
+    }
+
+    #messenger-icon:hover img {
+        transform: scale(1.1); /* Phóng to khi hover */
+        transition: transform 0.2s ease-in-out;
+    }
+    .nav-pills .nav-link {
+        color: #555;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-pills .nav-link:hover {
+        background-color: #f8f9fa;
+        color: #007bff;
+    }
+    
+    .nav-pills .nav-link.active {
+        background-color: #007bff;
+        color: #fff;
+    }
+    a {
+        text-decoration: none !important; /* Loại bỏ gạch chân */
+    }
+    
+    a:hover {
+        text-decoration: none !important; /* Loại bỏ gạch chân khi hover */
+    }
+    .navbar a {
+        text-decoration: none !important;
+    }
+    
+    .navbar a:hover {
+        text-decoration: none !important;
+    }
+    /* Căn chỉnh form tìm kiếm */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form .form-control {
+    flex: 1; /* Đảm bảo ô nhập liệu chiếm toàn bộ chiều rộng còn lại */
+    margin-right: 10px; /* Khoảng cách giữa ô nhập liệu và nút */
+}
+
+.search-form .btn {
+    white-space: nowrap; /* Đảm bảo nút không bị xuống dòng */
+}
+/* Sidebar */
+.list-group-item.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Card sản phẩm */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

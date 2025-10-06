@@ -1,0 +1,86 @@
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-footer button,
+.card-footer a {
+    margin: 5px 0;
+}
+```css
+/* Menu chính */
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.main-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-menu ul li a:hover {
+    background-color: #0056b3;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Dropdown menu */
+.main-menu ul li .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+.main-menu ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.main-menu ul li .dropdown-menu li {
+    margin: 0;
+}
+
+.main-menu ul li .dropdown-menu li a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-menu ul li .dropdown-menu li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
