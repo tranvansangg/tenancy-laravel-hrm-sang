@@ -8,6 +8,7 @@ use App\Models\Tenant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
+use Illuminate\Database\QueryException;
 
 class DepartmentController extends Controller
 {
@@ -82,8 +83,18 @@ class DepartmentController extends Controller
     $data['status'] = $request->input('status', 1);
     $data['created_by'] = auth()->id();
 
-    Department::create($data);
 
+try{
+    Department::create($data);
+}catch(QueryException $e){
+    if($e->getCode()== '23000'){
+        return redirect()->back()
+        ->withInput()
+        ->withErrors(['code' => 'Mã phòng ban đã tồn tại trong công ty!']);
+
+    }
+    throw $e; // Ném lại ngoại lệ nếu không phải lỗi trùng mã
+}
     return redirect()->route('admin.departments.index')
         ->with('success', 'Thêm phòng ban thành công!');
 }
